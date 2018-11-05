@@ -10,8 +10,8 @@ Checks all images from the AVA dataset if they have corrupted jpegs, and lists t
 Removal must be done manually !
 '''
 
-base_images_path = 'AVA_dataset/images/images'
-ava_dataset_path = 'AVA_dataset/AVA.txt'
+base_images_path = r'AVA_dataset/images/images/'
+ava_dataset_path = r'AVA_dataset/AVA.txt'
 
 IMAGE_SIZE = 128
 BASE_LEN = len(base_images_path) - 1

@@ -1,1 +1,6 @@
 .idea
+AVA_dataset
+
+*.pyc
+
+weights
