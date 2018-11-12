@@ -56,7 +56,7 @@ def earth_mover_loss(y_true, y_pred):
 
 NUM_FEATURES = 1536
 
-image_size = 224
+image_size = 100
 ip = Input(shape=(NUM_FEATURES,))
 x = Dropout(0.75)(ip)
 x = Dense(10, activation='softmax')(x)

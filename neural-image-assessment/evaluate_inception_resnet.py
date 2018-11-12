@@ -26,7 +26,7 @@ parser.add_argument('-rank', type=str, default='true',
 
 args = parser.parse_args()
 resize_image = args.resize.lower() in ("true", "yes", "t", "1")
-target_size = (224, 224) if resize_image else None
+target_size = (100, 100) if resize_image else None
 rank_images = args.rank.lower() in ("true", "yes", "t", "1")
 
 # give priority to directory

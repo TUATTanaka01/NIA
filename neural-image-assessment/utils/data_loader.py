@@ -8,7 +8,7 @@ import tensorflow as tf
 base_images_path = r'AVA_dataset/images/images/'
 ava_dataset_path = r'AVA_dataset/AVA.txt'
 
-IMAGE_SIZE = 224
+IMAGE_SIZE = 100
 
 files = glob.glob(base_images_path + "*.jpg")
 files = sorted(files)

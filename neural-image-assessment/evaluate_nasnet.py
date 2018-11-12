@@ -21,7 +21,7 @@ parser.add_argument('-rank', type=str, default='true',
                     help='Whether to tank the images after they have been scored')
 
 args = parser.parse_args()
-target_size = (224, 224)  # NASNet requires strict size set to 224x224
+target_size = (100, 100)  # NASNet requires strict size set to 224x224
 rank_images = args.rank.lower() in ("true", "yes", "t", "1")
 
 # give priority to directory
@@ -39,7 +39,7 @@ else:
     raise RuntimeError('Either -dir or -img arguments must be passed as argument')
 
 with tf.device('/CPU:0'):
-    base_model = NASNetMobile((224, 224, 3), include_top=False, pooling='avg', weights=None)
+    base_model = NASNetMobile((100, 100, 3), include_top=False, pooling='avg', weights=None)
     x = Dropout(0.75)(base_model.output)
     x = Dense(10, activation='softmax')(x)
 

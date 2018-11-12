@@ -7,7 +7,7 @@ from utils.data_loader import train_generator, val_generator
 sess = tf.Session()
 K.set_session(sess)
 
-image_size = 224
+image_size = 100
 
 def _float32_feature_list(floats):
     return tf.train.Feature(float_list=tf.train.FloatList(value=floats))

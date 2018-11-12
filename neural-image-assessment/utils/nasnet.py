@@ -278,7 +278,7 @@ def NASNet(input_shape=None,
 
     # load weights
     if weights == 'imagenet':
-        if default_size == 224:  # mobile version
+        if default_size == 100:  # mobile version
             if include_top:
                 if use_auxiliary_branch:
                     weight_path = NASNET_MOBILE_WEIGHT_PATH_WITH_AUXULARY
@@ -403,7 +403,7 @@ def NASNetLarge(input_shape=(331, 331, 3),
                   default_size=331)
 
 
-def NASNetMobile(input_shape=(224, 224, 3),
+def NASNetMobile(input_shape=(100, 100, 3),
                  dropout=0.5,
                  weight_decay=4e-5,
                  use_auxiliary_branch=False,
@@ -478,7 +478,7 @@ def NASNetMobile(input_shape=(224, 224, 3),
                   input_tensor=input_tensor,
                   pooling=pooling,
                   classes=classes,
-                  default_size=224)
+                  default_size=100)
 
 
 def NASNetCIFAR(input_shape=(32, 32, 3),
@@ -556,7 +556,7 @@ def NASNetCIFAR(input_shape=(32, 32, 3),
                   input_tensor=input_tensor,
                   pooling=pooling,
                   classes=classes,
-                  default_size=224)
+                  default_size=100)
 
 
 def _separable_conv_block(ip, filters, kernel_size=(3, 3), strides=(1, 1), weight_decay=5e-5, id=None):
